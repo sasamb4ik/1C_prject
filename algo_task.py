@@ -139,8 +139,8 @@ class Board:
         Удаляет из кучки карт полный набор (от Туза до шестерки), если он был найден
         '''
         if len(self.piles[pile_index]) == 9 and all(card.number == 14 - i for i, card in enumerate(self.piles[pile_index])):
-            self.piles[pile_index] = []  # Remove the pile
-            self.pile_illegal[pile_index] = False  # Reset illegal status
+            self.piles[pile_index] = []
+            self.pile_illegal[pile_index] = False
 
     def score(self):
         """
